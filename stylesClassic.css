@@ -1,0 +1,893 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.culture.ru/images/8f7b338f-8230-5d8a-8660-521790c6cc0f');
+    background-color: #3d1c02;
+    background-size: cover;
+    background-position: center;
+    color: #f7f7
+}
+
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------
+======================================================== ШАПКА САЙТА ========================================================
+*/
+
+header {
+    position: relative;
+    background-image: url('https://cdn.culture.ru/images/92b59d34-909a-528c-9e74-686352267416');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    overflow: hidden;
+    align-items: center;
+    border-bottom: 5px solid #ffd06b;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 67, 53, 0.3);
+    z-index: 1;
+}
+
+header h1,
+nav {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 100px;
+}
+
+h1 {
+    font-family: 'Sofia', sans-serif;
+    font-size: 80px;
+    text-shadow: 3px 3px 3px #ababab;
+    font-weight: bold;
+    text-align: left;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.button-link {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 80px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.button-link:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background: #fff;
+    left: 50%;
+    height: 2px;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.7;
+}
+
+.button-link:hover:before {
+    width: 100%;
+    left: 0;
+}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*====================== ФОТО СПРАВА ======================*/
+.logo-right {
+    position: absolute;
+    top: 50%;               
+    right: 150px;           
+    transform: translateY(-50%);        
+    width: 250px;           
+    height: 250px;
+    z-index: 3;
+    border-radius: 50%;    
+    box-shadow: 0px 0px 50px rgb(132, 47, 47);        
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+==============
+Стиль для main
+==============
+*/
+main {
+    padding: 20px;          
+    max-width: 1000px;      
+}
+
+
+
+/*
+================
+Стили для секций
+================
+*/
+section {
+    margin-bottom: 40px;        
+}
+
+
+/*
+=======================
+Стили для заголовков h2
+=======================
+*/
+h2 {
+    margin-bottom: 15px;        
+    color: #f7f7f7;           
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+================================================================= ДЛЯ РАБОТЫ С СЕКЦИЯМИ =================================================================
+*/
+#RJCK {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-content {
+    width: 100%;
+    padding-right: 20px;
+    text-shadow: 0 0 10px #000000;
+}
+
+.image-content {
+    width: 40%;
+    margin-top: 96px;
+}
+
+.image-content img {
+    width: 90%;
+    height: auto;
+}
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.card-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%; 
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px white;
+}
+
+.card:hover .card-img {
+    opacity: 0.5;
+}
+
+.card:hover .card-text {
+    opacity: 1;
+}
+
+.card h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 250px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        height: auto;
+        margin-right: 50px;
+    }
+}
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+================================================================= ДЛЯ РАБОТЫ С СЕКЦИЯМИ =================================================================
+*/
+
+
+#one p, #two p, #four p, #three p {
+    color: #f7f7f7;
+    line-height: 1.6;
+    font-size: 18px;
+    width: 90%;
+    margin-right: 20px; 
+    margin: 20px;
+    text-align: justify;
+}
+
+#three p{
+    color: #f7f7f7;
+    line-height: 1.6;
+    font-size: 18px;
+    width: 90%;
+    margin-block: initial;
+}
+
+
+
+#one h3 {
+    color: #e5edff;
+    font-size: 32px;
+    margin-left: 20px;
+    margin-top: revert;
+}
+
+#two h3 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-left: 20px;
+}
+
+#three h3 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-left: 20px;
+}
+
+.divider {
+    width: 100%;
+    height: 2px; 
+    background-color: #f7f7f7; 
+    margin: 20px 0;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+============================================================= ПЛЕЕР =============================================================
+*/
+
+#seek-bar {
+    width: 100%;
+    max-width: 400px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: nowrap;
+    color: white;
+    background-image: linear-gradient(rgb(127, 147, 160), rgb(91, 40, 55));
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    margin: 100px 20px 0 20px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box; 
+    padding: 15px;
+    gap: 10px;
+
+}
+
+
+.player button {
+    background-color:none;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#play-pause {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+
+.player p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    text-shadow: 0 0 0;
+
+}
+
+#current-time, #duration {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-shadow: 0 0 0;
+    color: white;
+}
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+/* Стили для боковой панели (aside) */
+aside {
+    background: linear-gradient(to bottom right, rgb(102, 43, 43), rgb(255, 205, 152));
+    padding: 15px; 
+    color: #fff;
+    position: fixed;
+    right: 10px; 
+    bottom: 10px; 
+    width: 300px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 11;
+    font-family: Arial, sans-serif; 
+    transition: all 0.3s ease-in-out;
+    padding-top: 30px; 
+    text-shadow: 0 0px 8px rgb(37, 19, 19);
+
+}
+
+
+aside h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+aside p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+
+.toggle-btn {
+    display: none;
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.214);
+}
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+==================================================== ПОДВАЛ САЙТА ====================================================
+*/
+
+footer {
+    background-color: #361f1f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #ffb348;
+    box-shadow: 0 0 20px #ffc037;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+
+/*
+================
+Ссылки в подвале
+================
+*/
+
+footer a {
+    color: #cc2f2f;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ff4d4d;
+}
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .logo-right {
+        right: 50px;
+        width: 200px;
+        height: 200px;
+    }
+
+    header h1 {
+        margin-left: 50px;
+        font-size: 60px;
+    }
+
+    .button-link {
+        padding: 10px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-right {
+        right: 20px;
+        width: 150px;
+        height: 150px;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    header h1 {
+        margin-left: 20px;
+        font-size: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #one p, #two p, #three p, #four p {
+        font-size: 16px;
+        margin: 10px;
+    }
+
+    #one h3, #two h3, #three h3, #four h3 {
+        font-size: 28px;
+    }
+
+    aside {
+        width: 80%;
+        right: 10%;
+        bottom: 20px;
+        font-size: 14px;
+    }
+
+    aside h3 {
+        font-size: 16px;
+    }
+
+    aside p {
+        line-height: 1.5;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    aside.hidden {
+        display: none;
+    }
+
+    .player {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+        margin: 60px 10px 0 10px;
+    }
+
+    .player p {
+        font-size: 14px;
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+
+    #seek-bar {
+        max-width: 300px;
+    }
+
+    #play-pause {
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-right {
+        display: none !important;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .button-link {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+
+    #one p, #two p, #three p, #four p {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    #one h3, #two h3, #three h3, #four h3 {
+        font-size: 24px;
+    }
+
+    .divider {
+        margin: 10px 0;
+    }
+
+    aside {
+        width: 90%;
+        right: 5%;
+        bottom: 10px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    aside h3 {
+        font-size: 14px;
+    }
+
+    aside p {
+        line-height: 1.4;
+        margin: 5px 0;
+    }
+
+    .player {
+        padding: 10px 20px;
+        margin: 50px 10px 0 10px;
+        max-width: 90%;
+        margin-left: 0;
+    }
+
+    .player p {
+        font-size: 12px;
+        max-width: 120px;
+    }
+
+    #seek-bar {
+        max-width: 250px;
+    }
+
+    #play-pause {
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 10px 5px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,940 @@
+
+* {
+    margin: 0;                  
+    padding: 0;                
+    box-sizing: border-box;     
+}
+
+body {
+    font-family: Arial, sans-serif;     
+    background-color: #19192d;        
+    color: #f7f7f7;                   
+}
+
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------
+======================================================== ШАПКА САЙТА ========================================================
+*/
+
+header {
+    position: relative;             
+    background-image: url('https://cdn.vox-cdn.com/thumbor/QlSCd-xXYfQMyHyKjQbJcn_3ulk=/21x0:999x550/1600x900/cdn.vox-cdn.com/assets/1578749/kpop_lead.jpg'); /* Устанавливаем фоновое изображение для header */
+    background-size: cover;         
+    background-position: center;    
+    padding: 50px 0;                
+    overflow: hidden;               
+    align-items: center;            
+    border-bottom: 5px solid #5580ae;
+    box-shadow: 0 0 20px #6741ff;
+}
+
+
+
+
+
+header::before {
+    content: "";           
+    position: absolute;    
+    top: 0;
+    left: 0;
+    width: 100%;            
+    height: 100%;           
+    background-color: rgba(179, 0, 149, 0.3);      
+    z-index: 1;            
+}
+
+header h1,
+nav {
+    position: relative;         
+    z-index: 2;                 
+}
+
+header h1 {
+    display: inline-block;     
+    padding: 10px 20px;        
+    margin-left: 100px;
+
+}
+
+
+/*
+=====================
+Заголовок Music World
+=====================
+*/
+h1 {
+    
+    font-family: 'Sofia', sans-serif;       /* Использует шрифт Sofia */
+    font-size: 80px;
+    text-shadow: 3px 3px 3px #ababab;     /* Тень */
+    font-weight: bold;                      /* Толщина шрифта */                      
+    text-align: left;                       /* Выровнять текст влево */
+    margin: 20px 0;                         /* Отступы вокруг заголовка */
+    letter-spacing: 1px;                    /* Расстояние между буквами */
+}
+
+
+
+/*
+============Для списка в навигации============
+*/
+nav ul {
+    display: flex;
+    justify-content: center;        
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*============Стили для пунктов списка============*/
+nav ul li {
+
+    margin: 0 15px;         
+}
+
+
+
+/*============Стили для ссылок-кнопок============*/
+
+.button-link {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 80px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 20px;
+    color: #ffffff;    
+    font-weight: bold;        
+  }
+  
+  .button-link:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background : #fff;
+    left: 50%;
+    height: 2px;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.7;
+  }
+  
+  /*============Эффект при наведении============*/
+  .button-link:hover:before {
+    width: 100%;
+    left:0;
+  }
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*====================== ФОТО СПРАВА ======================*/
+.logo-right {
+    position: absolute;
+    top: 50%;               
+    right: 150px;           
+    transform: translateY(-50%);        
+    width: 250px;           
+    height: 250px;
+    z-index: 3;
+    border-radius: 50%;    
+    box-shadow: 0px 0px 50px rgba(87, 151, 255, 1);        
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+==============
+Стиль для main
+==============
+*/
+main {
+    padding: 20px;          
+    max-width: 1000px;      
+}
+
+
+
+/*
+================
+Стили для секций
+================
+*/
+section {
+    margin-bottom: 40px;        
+}
+
+
+/*
+=======================
+Стили для заголовков h2
+=======================
+*/
+h2 {
+    margin-bottom: 15px;        
+    color: #f7f7f7;           
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+================================================================= ДЛЯ РАБОТЫ С СЕКЦИЯМИ =================================================================
+*/
+#RJCK {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-content {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.image-content {
+    width: 40%;
+    margin-top: 96px;
+}
+
+.image-content img {
+    width: 90%;
+    height: auto;
+}
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden; 
+
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+#CAR {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+================================================================= ДЛЯ РАБОТЫ С СЕКЦИЯМИ =================================================================
+*/
+
+
+#one p, #two p, #four p {
+    color: #f7f7f7;
+    line-height: 1.6;
+    font-size: 18px;
+    width: 90%;
+    margin-right: 20px; /* Оставляет место для фото */
+    margin: 20px; /* Отступы сверху и снизу */
+    text-align: justify;
+}
+
+#three p{
+    color: #f7f7f7;
+    line-height: 1.6;
+    font-size: 18px;
+    width: 90%;
+    margin-block: initial;
+}
+
+/* Уникальные стили для каждого жанра */
+#one h3 {
+    color: #e5edff;
+    font-size: 32px;
+    margin-left: 20px;
+    margin-top: revert;
+    text-shadow: 0 0 8px #5249ff;
+}
+
+#two h3 {
+    color: #ffb4ee;
+    font-size: 32px;
+    margin-left: 20px;
+    text-shadow: 0 0 8px #ff00e1;
+}
+
+#three h3 {
+    color: #d2b8ff;
+    font-size: 32px;
+    margin-left: 20px;
+    text-shadow: 0 0 8px #8b1eff;
+}
+
+.divider {
+    width: 100%;
+    height: 2px; /* Толщина линии */
+    background-color: #f7f7f7; /* Цвет линии */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Общие стили для секции регистрации */
+#register {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок формы */
+#register h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Sofia', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Стили для формы */
+#ticket-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Стили для меток (label) */
+#ticket-form label {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Стили для полей ввода */
+#ticket-form input,
+#ticket-form select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки */
+#ticket-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff4081;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Ховер-эффект для кнопки */
+#ticket-form button:hover {
+    background-color: #e5376e;
+}
+
+/* Добавление визуального акцента при фокусе на инпуты */
+#ticket-form input:focus,
+#ticket-form select:focus {
+    outline: none;
+    border-color: #ff4081;
+    box-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #register {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    #ticket-form {
+        gap: 10px;
+    }
+
+    #ticket-form button {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+/* Стили для боковой панели (aside) */
+aside {
+    background: linear-gradient(to bottom right, rgb(101, 101, 255), rgb(255, 152, 190));
+    padding: 15px; 
+    color: #fff;
+    position: fixed;
+    right: 10px; 
+    bottom: 10px; 
+    width: 300px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 11;
+    font-family: Arial, sans-serif; 
+    transition: all 0.3s ease-in-out;
+    padding-top: 30px; 
+    text-shadow: 0 0px 8px rgb(57, 38, 148);
+    box-shadow: 0 0 10px white;
+}
+
+
+aside h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+aside p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+
+.toggle-btn {
+    display: none;
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.214);
+}
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+==================================================== ПОДВАЛ САЙТА ====================================================
+*/
+
+footer {
+    background-color: #533260;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #ae55a8;
+    box-shadow: 0 0 10px #f537ff;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+
+/*
+================
+Ссылки в подвале
+================
+*/
+
+footer a {
+    color: #64a2ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ff4df3;
+}
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .logo-right {
+        right: 50px;
+        width: 200px;
+        height: 200px;
+    }
+
+    header h1 {
+        margin-left: 50px;
+        font-size: 60px;
+    }
+
+    .button-link {
+        padding: 10px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-right {
+        right: 20px;
+        width: 150px;
+        height: 150px;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    header h1 {
+        margin-left: 20px;
+        font-size: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #one p, #two p, #three p, #four p {
+        font-size: 16px;
+        margin: 10px;
+    }
+
+    #one h3, #two h3, #three h3, #four h3 {
+        font-size: 28px;
+    }
+
+    aside {
+        width: 80%;
+        right: 10%;
+        bottom: 20px;
+        font-size: 14px;
+    }
+
+    aside h3 {
+        font-size: 16px;
+    }
+
+    aside p {
+        line-height: 1.5;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    aside.hidden {
+        display: none;
+    }
+
+    .player {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+        margin: 60px 10px 0 10px;
+    }
+
+    .player p {
+        font-size: 14px;
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+
+    #seek-bar {
+        max-width: 300px;
+    }
+
+    #play-pause {
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer p, footer a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-right {
+        display: none !important;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .button-link {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+
+    #one p, #two p, #three p, #four p {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    #one h3, #two h3, #three h3, #four h3 {
+        font-size: 24px;
+    }
+
+    .divider {
+        margin: 10px 0;
+    }
+
+    aside {
+        width: 90%;
+        right: 5%;
+        bottom: 10px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    aside h3 {
+        font-size: 14px;
+    }
+
+    aside p {
+        line-height: 1.4;
+        margin: 5px 0;
+    }
+
+    .player {
+        padding: 10px 20px;
+        margin: 50px 10px 0 10px;
+        max-width: 90%;
+        margin-left: 0px;
+    }
+
+    .player p {
+        font-size: 12px;
+        max-width: 120px;
+    }
+
+    #seek-bar {
+        max-width: 250px;
+    }
+
+    #play-pause {
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 10px 5px;
+    }
+
+    footer p, footer a {
+        font-size: 12px;
+    }
+}

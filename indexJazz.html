@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> <!-- Шрифт для h1 заголовка -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=3d-float"> <!-- Стиль шрифта -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир музыки</title>
+    <link rel="stylesheet" href="stylesJazz.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="background-image">
+            <img src="https://avatars.mds.yandex.net/i?id=945ca09ed17e8a0189705552ee66ca2d_l-5228520-images-thumbs&n=13" alt="Фото справа" class="logo-right"> <!-- Фото справа -->
+        </div>
+        <h1 class="font-effect-3d-float">Music World</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="button-link">На главную</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+        <!-- Инфа про жанры -->
+        <section id="RJCK">
+            <section id="one" class="section-container">
+                <div class="text-content">
+                    <h3>Джаз</h3>
+                    <p>Джаз появился в начале XX века в США, соединяя африканские ритмы, европейскую гармонию и блюз. Родившись в Нью-Орлеане, он стал голосом времени, отражая эмоции и борьбу за свободу.</p>
+                    <p>Основой джаза является импровизация, которая делает каждое исполнение уникальным. Характерные черты жанра — ритмический свинг, синкопы и взаимодействие музыкантов в ансамбле.</p>
+                    <p>Джаз развивался, создавая стили от танцевального свинга до экспериментального авангарда. Каждый этап привносил новое звучание и возможности для творчества.</p>
+                    <p>Сегодня джаз вдохновляет музыкантов, оставаясь символом свободы и творчества. Он звучит на фестивалях, в кино и современной культуре, объединяя поколения.</p>
+                </div>
+
+                <div class="image-content">
+                    <img src="jazz.jfif" alt="Джаз" />
+                </div>
+
+            </section>
+        
+
+
+                    <div class="divider"></div>
+
+
+
+
+
+                    <section id="two" class="section-container">
+                        <div class="text-content">
+                            <h3>График популярности Джаза</h3>
+                            <p>График показывает изменения популярности джаза с течением времени.</p>
+                            <p>В 1950-х годах джаз переживал золотой век, становясь всё более популярным и развиваясь в различные стили, такие как боп и модальный джаз. Музыканты, как Чарли Паркер, Диззи Гиллеспи и Майлс Дэвис, привнесли инновации с быстрыми темпами, сложными гармониями и свободной импровизацией. Этот период также стал временем расцвета джазовых клубов и оркестров, таких как Дюк Эллингтон и Бенни Гудмен, а джаз стал важным культурным явлением, символизируя креативность и свободу.</p>
+                        </div>
+                    
+                        <div style="width: 100%; height: 400px;">
+                            <canvas id="jazzChart"></canvas> <!-- Контейнер для графика -->
+                        </div>
+                    </section>
+                    
+            </section>
+                    
+    
+
+        </section>
+
+    </main>
+
+
+    <div class="aside-text">
+        <aside id="sidebar">
+            <h3>Интересные факты</h3>
+            <p>Слово "джаз" изначально использовалось как сленг и только позже стало названием жанра.</p>
+            <button id="toggle-btn" class="toggle-btn">☰</button> <!-- Используем иконку в виде гамбургера для компактности -->
+        </aside>
+    </div>
+    
+    
+
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>Мир музыки</p>
+        <p>Автор: Величко В.Д.</p>
+        <p><a href="mailto:etopochta@music.ru">Связаться с нами</a></p>
+        <p><a href="indexR.html">Подробнее про рок</a></p>
+        <p><a href="indexK-pop.html">Подробнее про K-pop</a></p>
+        <p><a href="indexClassic.html">Подробнее про классику</a></p>
+    </footer>
+
+    <!-- Джава -->
+    <script src="scriptsJazz.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

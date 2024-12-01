@@ -1,0 +1,795 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f2224;
+    color: #f7f7f7;
+}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------
+======================================================== ШАПКА САЙТА ========================================================
+*/
+
+header {
+    position: relative;
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8402259629993.5a29355de059f.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    overflow: hidden;
+    align-items: center;
+    border-bottom: 5px solid #5580ae;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(108, 28, 32, 0.5);
+    z-index: 1;
+}
+
+header h1,
+nav {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 100px;
+}
+
+h1 {
+    font-family: 'Sofia', sans-serif;
+    font-size: 80px;
+    text-shadow: 3px 3px 3px #ababab;
+    font-weight: bold;
+    text-align: left;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+
+
+/*============Стили для ссылок-кнопок============*/
+
+.button-link {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 80px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 20px;
+    color: #ffffff;    
+    font-weight: bold;        
+  }
+  
+  .button-link:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background : #fff;
+    left: 50%;
+    height: 2px;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.7;
+  }
+  
+  /*============Эффект при наведении============*/
+  .button-link:hover:before {
+    width: 100%;
+    left:0;
+  }
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*====================== ФОТО СПРАВА ======================*/
+.logo-right {
+    position: absolute;
+    top: 50%;
+    right: 150px;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 250px;
+    z-index: 3;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #f7f7f7;
+}
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+================================================================= ДЛЯ РАБОТЫ С СЕКЦИЯМИ =================================================================
+*/
+#RJCK {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-content {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.image-content {
+    width: 40%;
+    margin-top: 96px;
+}
+
+.image-content img {
+    width: 90%;
+    height: auto;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+#CAR {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+================================================================= ДЛЯ РАБОТЫ С СЕКЦИЯМИ =================================================================
+*/
+
+#one p, #two p, #four p {
+    color: #f7f7f7;
+    line-height: 1.6;
+    font-size: 18px;
+    width: 90%;
+    margin-right: 20px;
+    margin: 20px;
+    text-align: justify;
+}
+
+#three p {
+    color: #f7f7f7;
+    line-height: 1.6;
+    font-size: 18px;
+    width: 90%;
+    margin-block: initial;
+}
+
+#one h3 {
+    color: #ff7f50;
+    font-size: 32px;
+    margin-left: 20px;
+    margin-top: revert;
+}
+
+#two h3 {
+    color: #c66c5e;
+    font-size: 32px;
+    margin-left: 20px;
+}
+
+#three h3 {
+    color: #00bfff;
+    font-size: 32px;
+    margin-left: 20px;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #f7f7f7;
+    margin: 20px 0;
+}
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+============================================================= ПЛЕЕР =============================================================
+*/
+
+#seek-bar {
+    width: 100%;
+    max-width: 400px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: nowrap;
+    color: #1f2224;
+    background: #7da0ae;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 100px 20px 0 20px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding: 15px;
+    gap: 10px;
+
+}
+
+
+.player button {
+    background-color:none;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#play-pause {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+
+.player p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+#current-time, #duration {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+aside {
+    background-color: #3f5664;
+    padding: 15px;
+    color: #fff;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease-in-out;
+    padding-top: 30px;
+}
+
+aside h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+aside p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.toggle-btn {
+    display: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.214);
+}
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+==================================================== ПОДВАЛ САЙТА ====================================================
+*/
+footer {
+    background-color: #6c1c20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #5580ae;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #c66c5e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #cfe1dc;
+}
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .logo-right {
+        right: 50px;
+        width: 200px;
+        height: 200px;
+    }
+    header h1 {
+        margin-left: 50px;
+        font-size: 60px;
+    }
+    .button-link {
+        padding: 10px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-right {
+        right: 20px;
+        width: 150px;
+        height: 150px;
+    }
+    header {
+        padding: 30px 0;
+    }
+    header h1 {
+        margin-left: 20px;
+        font-size: 50px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .text-content, .image-content {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #one p, #two p, #three p, #four p {
+        font-size: 16px;
+        margin: 10px;
+    }
+    #one h3, #two h3, #three h3, #four h3 {
+        font-size: 28px;
+    }
+    aside {
+        width: 80%;
+        right: 10%;
+        bottom: 20px;
+        font-size: 14px;
+    }
+    aside h3 {
+        font-size: 16px;
+    }
+    aside p {
+        line-height: 1.5;
+    }
+    .toggle-btn {
+        display: block;
+    }
+    aside.hidden {
+        display: none;
+    }
+    .player {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+        margin: 60px 10px 0 10px;
+    }
+    .player p {
+        font-size: 14px;
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+    #seek-bar {
+        max-width: 300px;
+    }
+    #play-pause {
+        font-size: 20px;
+    }
+    footer {
+        padding: 15px 10px;
+    }
+    footer p {
+        font-size: 14px;
+    }
+    footer a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-right {
+        display: none !important;
+    }
+    header {
+        text-align: center;
+        padding: 20px 0;
+    }
+    header h1 {
+        font-size: 40px;
+        margin-left: 0;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .button-link {
+        width: 100%;
+        padding: 10px;
+    }
+    .text-content, .image-content {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+    #one p, #two p, #three p, #four p {
+        font-size: 14px;
+        margin: 5px;
+    }
+    #one h3, #two h3, #three h3, #four h3 {
+        font-size: 24px;
+    }
+    .divider {
+        margin: 10px 0;
+    }
+    aside {
+        width: 90%;
+        right: 5%;
+        bottom: 10px;
+        padding: 10px;
+        font-size: 12px;
+    }
+    aside h3 {
+        font-size: 14px;
+    }
+    aside p {
+        line-height: 1.4;
+        margin: 5px 0;
+    }
+    .player {
+        padding: 10px 20px;
+        margin: 50px 10px 0 10px;
+        max-width: 90%;
+        margin-left: 0px;
+    }
+    .player p {
+        font-size: 12px;
+        max-width: 120px;
+    }
+    #seek-bar {
+        max-width: 250px;
+    }
+    #play-pause {
+        font-size: 18px;
+    }
+    footer {
+        padding: 10px 5px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    footer a {
+        font-size: 12px;
+    }
+}
+
+
+
